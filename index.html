@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #0d0f17;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #1e2639;
+        }
+
+        header .logo {
+            font-size: 26px;
+            color: #5ab0ff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: #d4d4d4;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #5ab0ff;
+        }
+
+        section {
+            padding: 120px 60px 80px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            font-size: 45px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .title span {
+            color: #5ab0ff;
+        }
+
+        .typing {
+            color: #5ab0ff;
+            font-weight: 600;
+            border-right: 3px solid #5ab0ff;
+            padding-right: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(20) forwards, blink 0.75s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 220px;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #5ab0ff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .skills-grid,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #141827;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #1d2335;
+            transition: 0.3s;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #5ab0ff;
+        }
+
+        .card h3 {
+            color: #5ab0ff;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            background: #0a0c12;
+            border-top: 1px solid #1e2639;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">J | Developer</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home" class="home">
+        <h2 class="title">Hi, I'm <span>Jomol</span></h2>
+        <h3 class="typing">Software Developer</h3>
+        <p class="subtitle">A passionate CSE student who loves building modern, clean and functional applications.</p>
+    </section>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="subtitle">I'm a B.Tech CSE student who enjoys coding, problem-solving, and creating projects that help
+            me grow as a developer.</p>
+    </section>
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Programming</h3>
+                <p>C, Java, Python</p>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="card">
+                <h3>Databases</h3>
+                <p>SQL, MySQL</p>
+            </div>
+            <div class="card">
+                <h3>Tools</h3>
+                <p>Git, GitHub</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Dark-themed developer portfolio with animations and typing effects.</p>
+            </div>
+            <div class="card">
+                <h3>To-Do App</h3>
+                <p>A simple task app using HTML, CSS & JS.</p>
+            </div>
+            <div class="card">
+                <h3>Weather App</h3>
+                <p>Real-time weather using API.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <p>Email: jomoljomu444@gmail.com</p>
+            <p>Phone: 7902407690</p>
+            <p>Location: Kerala, India</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Jomol | Developer Portfolio</p>
+    </footer>
+</body>
+
+</html>
